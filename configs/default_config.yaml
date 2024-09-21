@@ -1,0 +1,49 @@
+# Project
+
+#/Users/leahtan/Documents/3_Research/2024-Ali
+project:
+  root_path: "/Users/leahtan/Documents/3_Research/2024-Ali/ISR"
+  venv_path: "/Users/leahtan/Documents/3_Research/2024-Ali/ISR/.venv"
+
+#Data
+data:
+  dataset: "amazon"
+  path: "/Users/leahtan/Documents/3_Research/2024-Ali/ISR/data/raw"
+  meta_file: "Amazon_metadata_original.txt"
+  network_file: "J01Network.txt"
+  feature_file: "UserFeature.txt"
+  label_file: "UserLabel.txt"
+  train_file: "Training_Testing/50percent/train_4.csv" #use 50% labeled data
+  test_file: "Training_Testing/50percent/test_4.csv"
+
+#Model
+# 模型相关配置
+model:
+  name: "GCN" #choice: SGC, GCN;
+  hidden_dim: 64
+  dropout: 0.5
+
+# 训练相关配置
+training:
+  epochs: 200
+  lr: 0.01
+  weight_decay: 5e-4
+
+# 主动学习相关配置
+active_learning:
+  strategy: "random"
+  initial_budget: 5
+  budget_per_round: 10
+  max_budget: 150
+  degree: 2 #if use agc, set default degree to 2
+
+# 实验相关配置
+experiment:
+  num_runs: 10
+  seed: 42
+
+environment:
+  use_cuda: false
+  cuda_device: null  # 如果use_cuda为true，这里可以指定设备号
+  num_workers: 4  # 用于数据加载的工作进程数
+  pin_memory: false  # 如果使用CUDA，可以设置为true以加速数据传输

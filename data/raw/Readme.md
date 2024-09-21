@@ -1,0 +1,3 @@
+# Data Source
+The data is copied from the repository provided by the original paper: https://github.com/gnliu/spammer-isr/tree/main (Zhiang Wu, Guannan Liu, Junjie Wu, Yong Tan. Are Neighbors Alike? A Semisupervised Probabilistic Collaborative Learning Model for Online Review Spammers Detection)
+Training_Testing/ contains generated users for training and testing with 5%, 10%, 30% and 50% labeled data;
