@@ -28,10 +28,6 @@ from utils.metrics import accuracy, f1, f1_isr
 #f1 gives both micro and macro f1 scores, we focus on macro f1 score
 
 
-# from models.gcn import GCN  # 假设您的GCN模型在这个位置
-# from utils.data_utils import load_data, preprocess_features
-# from utils.train_utils import train_GCN, test_GCN
-
 from utils.args import get_citation_args
 args = get_citation_args()#get all the arguments
 print("args.train_size",args.train_size)
