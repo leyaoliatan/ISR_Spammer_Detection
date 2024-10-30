@@ -567,7 +567,7 @@ if __name__ == '__main__':
         total_node = 9424
         #num_labeled_list =[i for i in range(10, int(args.train_size*total_node), 100)] #test
         num_labeled_list =[i for i in range(10, int(args.train_size*total_node), 20)] # we select 10% of the labeled dataset into the training set by the selected active learning strategy
-    elif dataset == 'yelp':
+    elif dataset == 'yelp':print_graph_info
         pass #to be added 
     num_interval = len(num_labeled_list)
     val_results = {'micro': [[] for _ in range(num_interval)],
